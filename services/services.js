@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiUrl = 'https://api.themoviedb.org/3';
-const apiKey = 'api_key=8c247ea0b4b56ed2ff7d41c9a833aa77';
+const apiKey = 'api_key=868d27574efefab335d6a727d9250a53';
 
 // Get Popular Movies
 export const getPopularMovies = async () => {
@@ -16,12 +16,17 @@ export const getPopularMovies = async () => {
 // Get Upcoming Movies
 export const getUpcomingMovies = async () => {
   const resp = await axios.get(`${apiUrl}/movie/upcoming?${apiKey}`);
+  //   console.log(
+  //     'getUpcomingMovies : ',
+  //     JSON.stringify(resp.data.results, null, 2),
+  //   );
   return resp.data.results;
 };
 
 // Get Popular TV
 export const getPopularTv = async () => {
   const resp = await axios.get(`${apiUrl}/tv/popular?${apiKey}`);
+  //   console.log('getPopularTv : ', JSON.stringify(resp.data.results, null, 2));
   return resp.data.results;
 };
 
@@ -39,4 +44,9 @@ export const getDocumentaryMovies = async () => {
     `${apiUrl}/discover/movie?${apiKey}&with_genres=99`,
   );
   return resp.data.results;
+};
+
+export const getMovie = async id => {
+  const resp = await axios.get(`${apiUrl}/movie/${id}?${apiKey}`);
+  return resp.data;
 };

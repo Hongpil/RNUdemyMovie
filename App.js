@@ -11,7 +11,12 @@
  * [Stack Navigator]
  * $ npm install @react-navigation/stack
  * $ npm install react-native-gesture-handler
- *
+ * [vector icons]
+ * $ npm i react-native-vector-icons
+ * [별점(star rating)]
+ * $ npm i react-native-star-rating
+ * [날짜 포맷 설정]
+ * $ npm i dateformat
  *
  * $ npx pod-install ios
  */

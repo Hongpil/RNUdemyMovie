@@ -10,7 +10,11 @@ const propTypes = {
 const Card = ({navigation, item}) => {
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Detail')}
+      onPress={() => {
+        // console.log('navigation : ', navigation);
+        // console.log('item : ', item);
+        navigation.navigate('Detail', {movieId: item.id, test: 'idpil'});
+      }}
       style={styles.container}>
       <Image
         resizeMode="cover"
