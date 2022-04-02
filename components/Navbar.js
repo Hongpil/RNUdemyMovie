@@ -16,36 +16,35 @@ const propTypes = {
 const defaultProps = {
   main: false,
 };
-
 const Navbar = ({navigation, main}) => {
   state = {};
-    return (
-      <SafeAreaView>
-        {main ? (
-          <View style={styles.mainNav}>
-            <Image
-              style={styles.logo}
-              source={require('../assets/images/movies.png')}
-            />
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('Search');
-              }}>
-              <Icon name={'search-outline'} size={30} color={'#fff'} />
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.goBack();
-              }}>
-              <Icon name={'chevron-back'} size={40} color={'#fff'} />
-            </TouchableOpacity>
-          </View>
-        )}
-      </SafeAreaView>
-    );
+  return (
+    <SafeAreaView>
+      {main ? (
+        <View style={styles.mainNav}>
+          <Image
+            style={styles.logo}
+            source={require('../assets/images/movies.png')}
+          />
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Search');
+            }}>
+            <Icon name={'search-outline'} size={30} color={'#fff'} />
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <View>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
+            }}>
+            <Icon name={'chevron-back'} size={40} color={'#fff'} />
+          </TouchableOpacity>
+        </View>
+      )}
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
