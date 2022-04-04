@@ -9,7 +9,7 @@ const PlayButton = ({handlePress}) => {
       <Icon name={'caret-forward-outline'} size={30} color={Colors.white} />
     </Pressable>
   );
-}
+};
 
 const styles = StyleSheet.create({
   button: {

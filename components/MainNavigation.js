@@ -8,40 +8,40 @@ import Search from '../screens/Search';
 const Stack = createStackNavigator();
 
 const MainNavigation = () => {
-    return (
-        <Stack.Navigator headerMode={'screen'}>
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              headerTransparent: true,
-              header: ({navigation}) => (
-                <Navbar navigation={navigation} main={true} />
-              ),
-            }}
-          />
-          <Stack.Screen
-            name="Detail"
-            component={Detail}
-            options={{
-              headerTransparent: true,
-              header: ({navigation}) => (
-                <Navbar main={false} navigation={navigation} />
-              ),
-            }}
-          />
-          <Stack.Screen
-            name="Search"
-            component={Search}
-            options={{
-              headerTransparent: true,
-              header: ({navigation}) => (
-                <Navbar main={false} navigation={navigation} />
-              ),
-            }}
-          />
-        </Stack.Navigator>
-    );
-}
+  return (
+    <Stack.Navigator headerMode={'screen'}>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerTransparent: true,
+          header: ({navigation}) => (
+            <Navbar navigation={navigation} main={true} />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{
+          headerTransparent: true,
+          header: ({navigation}) => (
+            <Navbar main={false} navigation={navigation} />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="Search"
+        component={Search}
+        options={{
+          headerTransparent: true,
+          header: ({navigation}) => (
+            <Navbar main={false} navigation={navigation} />
+          ),
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default MainNavigation;

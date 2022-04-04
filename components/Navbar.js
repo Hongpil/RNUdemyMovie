@@ -18,7 +18,6 @@ const defaultProps = {
   main: false,
 };
 const Navbar = ({navigation, main}) => {
-  state = {};
   return (
     <SafeAreaView>
       {main ? (
@@ -46,7 +45,7 @@ const Navbar = ({navigation, main}) => {
       )}
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   mainNav: {
